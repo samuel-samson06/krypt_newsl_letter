@@ -31,3 +31,9 @@ export default Layout
 
 // ${darkMode?" from-[#81b77b] to-[#54b150]":"from-[#b1faaa] to-[#79f872]"} 
 // bg-gray-200
+
+//   {/* <video src={video}  className=' w-full h-full object-cover absolute top-0 left-0' playsInline loop autoPlay muted ></video> */}
+                  
+{/* <div className=' w-full h-full object-cover absolute top-0 left-0 '>
+<ReactPlayer url={video} loop={true} playing={true} height={"100%"} width={"100%"}/>
+</div> */}
