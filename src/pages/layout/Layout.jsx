@@ -10,7 +10,7 @@ function Layout() {
     <React.Fragment>
         <div className={` ${darkMode? "bg-[#393a3a]" : "bg-[#ebf7f8]"} h-screen  flex flex-col min-h-screen`}>
             <Header/>
-            <div className={` flex-grow w-full overflow-x-hidden  relative `}>
+            <div className={` flex-grow w-full  relative `}>
                 <video src={video} className=' w-full h-full object-cover absolute top-0 left-0' loop autoPlay muted ></video>
                 <main className={` relative bg-gradient-to-br from-[#121212] to-[#2b1515ea] bg-opacity-80 z-10  md:flex md:items-center rounded-xl mx-1 font-medium md:px-4 my-6 md:my-1 pb-10 text-yellow-500 `}>
                   <Outlet/>
