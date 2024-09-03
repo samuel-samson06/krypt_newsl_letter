@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import React,{ useEffect, useRef, useState} from 'react'
 import { motion } from 'framer-motion'
 import check_img from "../../assets/check-mark.svg"
@@ -53,7 +52,7 @@ function WriteUp() {
                         }} 
                         initial="initial" animate="animate"
                     className=" text-sm lg:text-base font-[helvetica] font-medium ">
-                        Escape to a luxurious hotel in Africa with our incredible weekend getaway reward! One lucky holder will win a weekend getaway at a breathtaking five-star resort, nestled in a stunning location amidst Africa's natural beauty.
+                        Escape to a luxurious hotel in Africa with our incredible weekend getaway reward! One lucky holder will win a weekend getaway at a breathtaking five-star resort, nestled in a stunning location amidst Africas natural beauty.
                     </motion.article>
                     <div className=' overflow-hidden flex flex-col gap-3'>
                         <span className={` transition-all duration-150 ${!staggerAnimation && " translate-y-28"} flex items-center gap-2 text-sm `}><img loading='lazy' className=' w-4' src={check_img} alt="" />2 nights accommodation in an ensuite</span>

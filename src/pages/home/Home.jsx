@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import WriteUp from './WriteUp.jsx'
 import Form from './Form'
+import WriteUp from './WriteUp';
 import { MyContext } from '../../context/Context'
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 
