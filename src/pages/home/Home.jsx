@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import Form from './Form'
 import { MyContext } from '../../context/Context'
 import MailchimpSubscribe from "react-mailchimp-subscribe";
-import WriteUp from './About';
+import About from './About';
 
 function Home() {
   const {darkMode} = useContext(MyContext)
@@ -13,7 +13,7 @@ function Home() {
     <React.Fragment>
         <div>
            <div className=' py-4 px-2'>
-            <WriteUp/>
+            <About/>
            </div>
            <div className={`  mx-2 mb-5 md:flex ${darkMode?"bg-[#252525]":"bg-[#faf9f6]"}  border-gray-300 border-[1px] rounded-md`}>
             <MailchimpSubscribe 
