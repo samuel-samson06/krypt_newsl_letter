@@ -1,14 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 import React,{ useEffect, useRef, useState} from 'react'
 import { motion } from 'framer-motion'
-// import { MyContext } from '../../context/Context'
 import check_img from "../../assets/check-mark.svg"
 import vacation_img from "../../assets/vacation.jpg"
 import treasure from "../../assets/treasure.png"
 import HeaderMesh from './HeaderMesh'
 
 function WriteUp() {
-    // const {darkMode} = useContext(MyContext)
     const[staggerAnimation, setStaggerAnimation] = useState(false)
     const ref = useRef(null);
 
