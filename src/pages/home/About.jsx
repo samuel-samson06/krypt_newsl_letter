@@ -5,7 +5,8 @@ import vacation_img from "../../assets/vacation.jpg"
 import treasure from "../../assets/treasure.png"
 import HeaderMesh from './HeaderMesh'
 
-function WriteUp() {
+
+function About() {
     const[staggerAnimation, setStaggerAnimation] = useState(false)
     const ref = useRef(null);
 
@@ -104,4 +105,4 @@ function WriteUp() {
     )
 }
 
-export default WriteUp
+export default About

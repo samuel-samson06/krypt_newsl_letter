@@ -2,13 +2,12 @@ import React, { useContext } from 'react'
 import Form from './Form'
 import { MyContext } from '../../context/Context'
 import MailchimpSubscribe from "react-mailchimp-subscribe";
-import WriteUp from './WriteUp';
+import WriteUp from './About';
 
 function Home() {
   const {darkMode} = useContext(MyContext)
 
   const postUrl = `https://gmail.us11.list-manage.com/subscribe/post?u=bb477e19eeaf92e6a1d401373&id=bf60550742`
-
 
   return (
     <React.Fragment>
