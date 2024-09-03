@@ -101,7 +101,7 @@ function WriteUp() {
             </aside>
         </section>
     </React.Fragment>
-  )
+    )
 }
 
 export default WriteUp

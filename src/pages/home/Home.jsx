@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import Form from './Form'
-import WriteUp from './WriteUp';
 import { MyContext } from '../../context/Context'
 import MailchimpSubscribe from "react-mailchimp-subscribe";
+import WriteUp from './WriteUp';
 
 function Home() {
   const {darkMode} = useContext(MyContext)
@@ -34,3 +34,24 @@ function Home() {
 }
 
 export default Home
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
