@@ -3,11 +3,14 @@ import React, { useContext, useEffect, useState } from 'react'
 import Socials from './Socials'
 import { MyContext } from '../../context/Context'
 import emailImg from "../../assets/email_image.svg"
+import { motion } from 'framer-motion'
+
 
 function Form({status, onValidated}) {
     const {darkMode} = useContext(MyContext)
     const [inputFields, setInputFields] = useState({name:"", email:""})
     const [text, setText] = useState(false)
+    const [notificationText, setNotificationText] = useState("")
     const [emptyFieldTrigger, setEmptyFieldTrigger] = useState(false)
     const {name, email} = inputFields
 
@@ -20,13 +23,22 @@ function Form({status, onValidated}) {
         if(name.length==0 || email.length==0){
             setEmptyFieldTrigger(true)
         }else{
-            if(navigator.onLine){
+            const saved_local = JSON.parse(localStorage.getItem("email_mail_chimp"))
+            if(navigator.onLine && email!==saved_local){
                 onValidated({
                     EMAIL:email,
                     MERGE1:name
                 })
-                setInputFields({name:"", email:""})
                 setText(true)
+                setInputFields({name:"", email:""})
+                setNotificationText("Waitlist Confirmed ✔")
+                localStorage.setItem("email_mail_chimp",JSON.stringify(email))
+            }else if(navigator.onLine && email===saved_local){
+                setText(true)
+                setNotificationText("Email Used Previously")
+                setInputFields({...inputFields, email:""})
+            }else{
+                console.log("OFFLINE")
             }
         }
     }
@@ -40,21 +52,49 @@ function Form({status, onValidated}) {
     }, [emptyFieldTrigger])
     
     useEffect(()=>{
+            
+
         const timer = setTimeout(()=>{
             setText(false)
+            setNotificationText("")
         },3000)
-
         return ()=>{clearTimeout(timer)}
     }, [text])
     
     
     return (
     <React.Fragment>
-        {text &&<h3 className=" pt-5 text-center text-white ">
-          {status !== "success" && "Subscribed Successfully!"}
-        </h3>}
 
-        <div className=" md:w-full">
+        <div className=" overflow-hidden md:w-full">
+           <aside className=' flex flex-col items-center justify-center'>
+            {
+            
+            <motion.h3
+            variants={{
+                initial:{
+                    y:-1000,
+                },
+                animate:{
+                    y:0,
+                    transition:{
+                        duration:0.1,
+                        type:"tween"
+                    }
+                },
+                out:{
+                    y:-1000,
+                    transition:{
+                        duration:0.1,
+                        type:"tween"
+                    }
+                }
+            }}
+            initial="initial" animate={text?"animate":"out"}
+            className={` px-5 py-1 rounded-full mt-3 ${notificationText!="Waitlist Confirmed ✔"?"bg-yellow-500":"bg-green-700"} w-fit  text-center text-white `}>
+            {status !== "success" && notificationText}
+            </motion.h3>
+            }
+            </aside> 
             <form action="" method={"POST"} onSubmit={handleOnSubmit} className={` ${darkMode?"text-white ":"text-black"} shadow-sm md:justify-center md:h-full lg:grid lg:grid-cols-2 pt-6 px-1 mx-4 lg:gap-10`}>
                 <div className=" flex flex-col  gap-6">
                     <div className=' flex flex-col'>
