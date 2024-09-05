@@ -6,7 +6,7 @@ function HeaderMesh() {
   return (
     <React.Fragment>
         <div className=' w-full md:grid lg:grid-cols-2'>
-            <img src={img} className='  col-span-1 pt-5 rounded-md' alt="image" />
+            <img src={img} loading={"lazy"} className='  col-span-1 pt-5 rounded-md' alt="image" />
             <section className=" lg:items-center lg:flex lg:flex-col lg:justify-center col-span-1 md:text-center lg:pb-28 max-md:border-b-2 max-md:border-white  px-2 md:px-5 flex flex-col  mb-12 pb-10 ">
                 <br />     
            {/* <h1 className=" text-center text-lg md:text-xl">MESHVAULT X KRYPT</h1>  */}

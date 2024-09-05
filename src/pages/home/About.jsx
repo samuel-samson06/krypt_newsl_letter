@@ -35,7 +35,7 @@ function About() {
                         } 
                     }} 
                     initial="initial" animate="animate" 
-                    >Enjoy A Weekend Getaway 😍</motion.h1>
+                    >Enjoy A Weekend Accommodation 😍</motion.h1>
                 </section>
                 <main className=' flex flex-col gap-5'>
                     <motion.article 
@@ -53,10 +53,10 @@ function About() {
                         }} 
                         initial="initial" animate="animate"
                     className=" text-sm lg:text-base font-[helvetica] font-medium ">
-                        Escape to a luxurious hotel in Africa with our incredible weekend getaway reward! One lucky holder will win a weekend getaway at a breathtaking five-star resort, nestled in a stunning location amidst Africas natural beauty.
+                        Escape to a luxurious hotel in Africa with our incredible weekend accommodation reward! One lucky holder will win a weekend getaway at a breathtaking five-star resort, nestled in a stunning location amidst Africas natural beauty.
                     </motion.article>
                     <div className=' overflow-hidden flex flex-col gap-3'>
-                        <span className={` transition-all duration-150 ${!staggerAnimation && " translate-y-28"} flex items-center gap-2 text-sm `}><img loading='lazy' className=' w-4' src={check_img} alt="" />2 nights accommodation in an ensuite</span>
+                        <span className={` transition-all duration-150 ${!staggerAnimation && " translate-y-28"} flex items-center gap-2 text-sm `}><img loading='lazy' className=' w-4' src={check_img} alt="" />Weekend accommodation in an ensuite</span>
                         <span className={` transition-all duration-300 ${!staggerAnimation&&" translate-y-44"} flex items-center gap-2 text-sm `}><img loading='lazy' className=' w-4' src={check_img} alt="" />Gourmet dining experiences restaurants</span>
                         <span className={` transition-all duration-700 ${!staggerAnimation&&" translate-y-64"} flex items-center gap-2 text-sm `}><img loading='lazy' className=' w-4' src={check_img} alt="" />Access to top-notch facilities</span>                    
                     </div>
