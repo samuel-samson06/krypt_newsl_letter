@@ -32,7 +32,7 @@ function HeaderMesh() {
                     who buy these NFTs can then redeem them for our merch drop  from the krypt  vault at a later date. By signing up,
                     you'll be the first to receive exclusive updates about our Limited 
                     Edition merch drop and sneak peeks into the treasure hunt. Get ready for an adventure like no other 
-                    the countdown to October is on! Stay tuned for more thrilling updates!
+                    the countdown to January 2025 is on! Stay tuned for more thrilling updates!
                     {/* Exciting news for all crypto enthusiasts! Our team is hard at work crafting an epic treasure hunt on our main website, set to launch this October. While we put the finishing touches on the main site, we're thrilled to invite you to join our waitlist. By signing up,
                     you'll be the first to receive exclusive updates about our Limited 
                     Edition merch drop and sneak peeks into the treasure hunt. Get ready for an adventure like no other 
